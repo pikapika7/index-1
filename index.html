@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Постхоррор: ужасы высшего порядка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #111 0%, #2a0a0a 100%);
+            color: #c9a110;
+            padding: 20px 0;
+            border-bottom: 3px solid #8b0000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #branding h1 {
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover, nav .current a {
+            color: #c9a110;
+            background: rgba(139, 0, 0, 0.2);
+        }
+
+        #showcase {
+            min-height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        #showcase h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        #showcase p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 60px 0;
+            background: #1a1a1a;
+        }
+
+        .post {
+            background: linear-gradient(145deg, #252525, #1a1a1a);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            border-left: 5px solid #8b0000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .post h2 {
+            color: #c9a110;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .film-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .film-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .film-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.3);
+        }
+
+        .film-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .film-card-content {
+            padding: 20px;
+        }
+
+        .film-card h3 {
+            color: #c9a110;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #111 0%, #2a0a0a 100%);
+            color: #e0e0e0;
+            text-align: center;
+            padding: 40px 0;
+            border-top: 3px solid #8b0000;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            #showcase h1 {
+                font-size: 2.5rem;
+            }
+
+            .film-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Тёмные Врата</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Главная</a></li>
+                    <li><a href="films.html">Фильмы</a></li>
+                    <li><a href="concept.html">Что такое Постхоррор?</a></li>
+                    <li><a href="directors.html">Режиссёры</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="roadmap.html">Roadmap</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Постхоррор: ужасы высшего порядка</h1>
+            <p>Исследуйте новый жанр, где атмосфера и психологизм заменяют кровавые сцены и скримеры</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <article class="post">
+                <h2>Добро пожаловать в мир постхоррора</h2>
+                <p>Постхоррор — это эволюция жанра ужасов, где режиссёры отказываются от традиционных скримеров и кровавых сцен в пользу глубокого психологического анализа, атмосферного напряжения и исследования человеческой психики. Это кино, которое не просто пугает, а заставляет задуматься.</p>
+                
+                <div class="film-grid">
+                    <div class="film-card">
+                        <img src="https://kinopoisk-ru.clstorage.net/l2j9b5365/c1ced0L6G/gDqqZN37xM0VWXGyYU8T0yoj0pTJBMzi9Tif7Iln1g5oshBabyOAkqrqHQ0S8OwNQtpRjbzF8tJrrHqcPp2G57Eyq3WMhuy0eUQIj1gGTpZzGu_lkUyRw6wo66H8CqqyqBLY_6e7fDIqW5gUK-yVfAeDUKzVgbL6DqFjVZ-Vi4qs5r50hRMtockhcIKZh4f_au62-OVhrCbxgZuAZdN29kS-lPuDX6heout4mKP5ycDDh6wsAY2mv1L5r0kiJZN-vILmiG3v6cWFWazKPSN_C_rKNoh1USAuPa0XWIFjWhZAdtTbi7cAhgKXiHyXDf24e6Mo6F0xGntStVfxRoVDktgiYuBNF5EVBfGM2lnnn4tagu5kDVlMXj1Ra9CFl_4SZMLEu0eTMFqqc2CUK9W54OuHNKhdBdaHDm1jAba5OzK8NnKgHQ_dIZEJaMJJexsr7lY6iHFJZE75wRcAsb_KBowCfDtHLyxyZnc0ZG9xsQyr7_wgTQk-2-pJA53msYfqCN6KdOWjqck96VxCpY8LBxrSXijVnahugXkzGKHr2tIcjlg3Xys48mLPyIyT6akUax-IREEpNmd67aO9anFDcsiGamjFuw194fEAKuFfa9uaXuKUmTU8RklFb8Rxk0bueF44LxfTDKqiYyTUrxUFWKc_sAjNqZa38vmDrUKZW-4w_jIQCQslYYVBdAJJxy-HltJefP2dkG69rcNkgZPCcgz2BM_zFxRW-lMQ9FM55eSnW8woNcVy237ln2WGtSO2MAa2lOW3tckBzdiy3ZuXaxJOOhyNHWBWZXU7UIFnypLQwmxTswOA9pYztEyjlfWwe3fo4InxFh8q2Z_9LsWbbjgqJuDRa81pAdVgsglnk9ti-iK4FV2oytlFF_BFD_IK3KpgM1efGNKqx_SQxzk1OLuXWMTlvRbPhkmXAToRTwqgbo74cfeVeUVh4E4hcxvLumry8NFFsCpxyTsYpRfOgpSCaHtDPwRyjpvECD9VDeifp6xgpQF2a5JJv8nuEeuKOAKCuAlzIbnFzQiCwS-za4rOzmy90STquVkzEJkbqu5IyhhvVwPgXtLjsEzPkcUIewe0tCkxVnfyYe8x5o0P-pBG_tB5l5Gx-a20YjnjEx_2av5scYkgpoHR-9SRS0IqcB6AF5-_LAKWX_T0w-1phH9nVIwtifa_9k0j6brdv5rsTg68vS-FObkdLI6NKzsHIhLCTH3ZVDrBSZdsectSZkiSnCtzpzAu5u8A2B_hSfx7b4xkqfFy74IhFxU-QeuSuGby9FVjbTG5jdw2zcNDb14KvhwdkbhWsS17gA1vJmoYRnyT_xtootanCPQ3OaW0r5sEiNEJehsmLZu5VnFbtjByEmC5b0WxvW1gzo1b4yuyJn5gAeGkptFFQ1y5G8YSEE54vxuXvAYio6hk23mdiPN7JFDF7ZbnfiGjiSYpMwZU1qbkxe9ZWZXx3M6xRx8TJtrKBJnZtM4JRa-gAcdCXlB-7BPLW7iO5lMooP-1KcB7Y0yg-RG6e5Ilk7VyXZNqxCLKUIG_MS0FgSSqTfc32_oi0jQNASTuLVmnoD2fMpY8dpSrwzNg2mKrgARXeX0Mf3_8XMWB8kdqJYPxQpnbakxWZjDVmx01sQVYLm0DmxeKzl6ETT2QUjnZIwQ5Y6L2SC5w_zOLiN4W34D8k229kLvvWLTlxcaTUv2jyYoBa2I09s6YuR814XUZZD7lQyNr2vrWKMHRlErZ8a8EsWvyfvz-fO9TmySO7kOIVP-B4QiPX8jcWbk-w4LNBw3aXY-yEPYOBNEHXTU91TCeXQsbxxIS_vQdXcR27cVnRB3nTp5I1uTLdy-wgh4bNAgn7QWYY_ekrEEZwjeyeet5-o0jfhS2AqCNu1lRDRWgmmUPf-tiKqKo1QkgVtklH1AN9_ISXE48T1OjdAryo0T8x43l2EvTfCTVhRZDMl2nvTpBq1IcQm6YnSPRpYn5GC6JEwfL4oIutIEVrHL9vScEaed2Ygh-9L9Hj4CK4kuQzKdZyQTHm2hE1TVus2ItI6FKpS-OAEaioL0D0TGxRQQysatvc95-tsR50cRyeeGPqDnjroaIpjTvA4uwJp4rMPSXWQFsOyeMBGFBPvuCMbs1srm7YtR6IrjRL6HdDX0oFqnzkwsK3rqwGfW07i1Ru8whw1b2RNpAa9_XGCp-70SYE42BFGeDpCRRdTrH1s1TDdY1C_ZIvjr87SetcR0FfCLd4wf7lgpGkAFxTD6FdeNYyZtGeogOuHu7vyz-Mj9w5Otx8cx3v1Rc1S3CX9JBLy3OpTeeVDIWOG2vXe01haBOpQtDXyIWuuS5bahyyX2j5JGHbkrsdnzXd7PgPlbjBOAnfWFE81906MURrtuCXfeFVnXTUuT6pjDpV-GlqRUQzm13ZxN6TkaAFUFswsmhr6AVx_biXLKA82NTYNZu3wBs-6WVlGsLRPB5eTr7fgEjdd7R0zKgCjqc5Q9pcXGZIM6Rq78TLur6-BFB1EopQaekKY_2_pTeTD_HA9Q6Iluo2HOdgWQ_61A4PTU2Hzpd4xmy0etqnFKidJVn0d3BhfxKZXO3e2Z2ggD5-TQqvU3raL3DvmYwUkxnf6u8Et63PMAvccn072eIYHnFUp9iOa8JbsFX4iC6TrBJB5U95fUwMk0f8_vy-spIbdEsKrXJrxyxhw6KaDZEM8tbbF4W4yxsJ409aBcnKDhJdU5jLt2fkX7N5z6cbnbcmRcl1WV93KIh5zPr_sYCGA3lyDLNbWechefmWng-1EuzsyyaKsuoLPut_Qj3j9igKU02G97d-xVW1ad2UCIODEnjpekRlRgeqXs7B_omgsjpZVBKSSFPkPlHrtoALsxLC8tcGoYjDHB_DQV4p3uE0LEhou8KfY_lPinrtlA--nxNP8ERGX1YFinPr09yJvb05cE0osWJ81ANA0rmUAp084dXZNYSF5RYI2mZZBcT8IR9ieo3Cj2w" alt="Ведьма">
+                        <div class="film-card-content">
+                            <h3>Ведьма</h3>
+                            <p>Роберт Эггерс, 2015</p>
+                        </div>
+                    </div>
+                    <div class="film-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_FMjpg_UX1000_.jpg" alt="Прочь">
+                        <div class="film-card-content">
+                            <h3>Прочь</h3>
+                            <p>Джордан Пил, 2017</p>
+                        </div>
+                    </div>
+                    <div class="film-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_FMjpg_UX1000_.jpg" alt="Реинкарнация">
+                        <div class="film-card-content">
+                            <h3>Реинкарнация</h3>
+                            <p>Ари Астер, 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Тёмные Врата &copy; 2025 | Исследуем глубины страха</p>
+        </div>
+    </footer>
+</body>
+</html>
